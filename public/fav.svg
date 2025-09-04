@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <!-- 背景の六角形（ブロックチェーン要素） -->
+  <polygon points="16,2 26,8 26,20 16,26 6,20 6,8" fill="#1a365d" stroke="#2d5a9b" stroke-width="1"/>
+  
+  <!-- 内側の証明書フレーム -->
+  <rect x="8" y="10" width="16" height="12" rx="1" fill="#ffffff" stroke="#2d5a9b" stroke-width="0.5"/>
+  
+  <!-- 証明書の装飾線 -->
+  <line x1="10" y1="13" x2="22" y2="13" stroke="#1a365d" stroke-width="0.5"/>
+  <line x1="10" y1="15" x2="20" y2="15" stroke="#1a365d" stroke-width="0.5"/>
+  <line x1="10" y1="17" x2="18" y2="17" stroke="#1a365d" stroke-width="0.5"/>
+  
+  <!-- NFTを表すダイヤモンド/宝石形状 -->
+  <polygon points="16,6 18,8 16,10 14,8" fill="#ffd700" stroke="#b8860b" stroke-width="0.5"/>
+  
+  <!-- 認証チェックマーク -->
+  <path d="M13,19 L15,21 L19,17" fill="none" stroke="#059669" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

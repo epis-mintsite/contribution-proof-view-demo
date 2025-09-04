@@ -101,8 +101,8 @@ export function extractHashableMetadata(nft: {
 }): HashableMetadata {
   // imageUrlからIPFS URIを抽出（HTTPゲートウェイURLの場合）
   let imageUri = nft.imageUrl
-  if (imageUri.includes('epis.mypinata.cloud/ipfs/')) {
-    const cid = imageUri.split('epis.mypinata.cloud/ipfs/')[1]
+  if (imageUri.includes('epismintsite-demo.mypinata.cloud/ipfs/')) {
+    const cid = imageUri.split('epismintsite-demo.mypinata.cloud/ipfs/')[1]
     imageUri = `ipfs://${cid}`
   }
 

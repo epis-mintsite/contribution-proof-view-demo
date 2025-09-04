@@ -3,7 +3,7 @@ import { MainContent } from './MainContent'
 
 const App = () => {
   return (
-    <BrowserRouter basename='/contribution-proof-view-dev'>
+    <BrowserRouter basename='/contribution-proof-view-demo'>
       <Routes>
         {/* メインルート - クエリパラメータ(?id=xxx)で対応 */}
         <Route path='/' element={<MainContent />} />

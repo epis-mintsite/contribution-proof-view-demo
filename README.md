@@ -70,7 +70,7 @@ src/
 アプリケーションにアクセスする際は、URLパラメータで`requestId`を指定してください：
 
 ```
-https://your-domain.com/contribution-proof-view-dev/?requestId=abc123
+https://your-domain.com/contribution-proof-view-demo/?requestId=abc123
 ```
 
 ## 🔧 開発用スクリプト

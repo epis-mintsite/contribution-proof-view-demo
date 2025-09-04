@@ -5,7 +5,7 @@ import { viteSingleFile } from 'vite-plugin-singlefile'
 // https://vite.dev/config/
 const ReactCompilerConfig = {}
 export default defineConfig({
-  base: '/contribution-proof-view-dev/',
+  base: '/contribution-proof-view-demo/',
   plugins: [
     react({
       babel: {

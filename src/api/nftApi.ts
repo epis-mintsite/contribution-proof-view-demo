@@ -2,9 +2,9 @@ import { QueryClient, useQuery } from '@tanstack/react-query'
 import { fileDataType, NftDataType } from '../types/NftDataTypes'
 
 // 定数定義
-const API_BASE_URL = 'https://epis-mint-site-backend-dev.up.railway.app'
+const API_BASE_URL = 'https://epis-mint-site-backend-demo.up.railway.app'
 
-const IPFS_GATEWAY_URL = 'https://epis.mypinata.cloud/ipfs'
+const IPFS_GATEWAY_URL = 'https://epismintsite-demo.mypinata.cloud/ipfs'
 
 /**
  * NFT証明書API レスポンスの型定義

@@ -29,11 +29,10 @@ const FilePreviewModal = ({ file, isOpen, onClose }: FilePreviewModalProps) => {
       try {
         // base64をBlobに変換
         const byteCharacters = atob(file.fileData)
-        const byteNumbers = new Array(byteCharacters.length)
+        const byteArray = new Uint8Array(byteCharacters.length)
         for (let i = 0; i < byteCharacters.length; i++) {
-          byteNumbers[i] = byteCharacters.charCodeAt(i)
+          byteArray[i] = byteCharacters.charCodeAt(i)
         }
-        const byteArray = new Uint8Array(byteNumbers)
         const blob = new Blob([byteArray], { type: 'application/pdf' })
         const url = URL.createObjectURL(blob)
         setPdfUrl(url)
@@ -141,12 +140,18 @@ const FilePreviewModal = ({ file, isOpen, onClose }: FilePreviewModalProps) => {
       // PCでは従来のiframeを使用
       return (
         <div className='flex justify-center'>
-          <iframe
-            src={`data:application/pdf;base64,${file.fileData}`}
-            title={file.fileName}
-            className='h-[70vh] w-full rounded-lg border border-gray-200'
-            style={{ minHeight: '70vh' }}
-          />
+          {pdfUrl ? (
+            <iframe
+              src={pdfUrl}
+              title={file.fileName}
+              className='h-[70vh] w-full rounded-lg border border-gray-200 break-all'
+              style={{ minHeight: '70vh' }}
+            />
+          ) : (
+            <div className='flex h-[70vh] w-full items-center justify-center text-gray-500'>
+              PDFを読み込み中...
+            </div>
+          )}
         </div>
       )
     }

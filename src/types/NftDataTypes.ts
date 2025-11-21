@@ -7,6 +7,7 @@ export type NftDataType = {
   hash: string
   expiredAt: Date
   createdAt: Date
+  updatedAt?: Date // オプショナルな更新日時
   files?: fileDataType[] // オプショナルに変更
 }
 

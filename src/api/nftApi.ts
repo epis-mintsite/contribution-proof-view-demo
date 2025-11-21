@@ -21,6 +21,7 @@ type NftCertificateApiResponse = {
     hash: string
     expiredAt: number // Unixタイムスタンプ（秒）
     createdAt: number // Unixタイムスタンプ（秒）
+    updatedAt?: number // Unixタイムスタンプ（秒）、オプショナル
     files: fileDataType[] // オプションでファイル情報
   }
 }
@@ -134,6 +135,9 @@ export const fetchNftCertificate = async (
       hash: data.hash,
       expiredAt: convertUnixTimestampToDate(data.expiredAt),
       createdAt: convertUnixTimestampToDate(data.createdAt),
+      updatedAt: data.updatedAt
+        ? convertUnixTimestampToDate(data.updatedAt)
+        : undefined, // updatedAtがある場合のみDateに変換
       files: data.files || [], // ファイルが存在しない場合は空配列を設定
     }
   } catch (error) {

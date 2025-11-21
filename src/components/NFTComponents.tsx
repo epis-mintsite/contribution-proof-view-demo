@@ -448,7 +448,7 @@ export const NFTCard = ({ nft }: { nft: NftDataType }) => {
                   </span>
                 </div>
                 <span className='text-lg font-bold text-blue-900'>
-                  {new Date(nft.createdAt).toLocaleDateString('ja-JP')}
+                  {new Date(nft.createdAt).toLocaleDateString('ja-JP', { timeZone: 'UTC' })}
                 </span>
               </div>
               {nft.expiredAt && (
@@ -490,7 +490,7 @@ export const NFTCard = ({ nft }: { nft: NftDataType }) => {
                       isExpired ? 'text-red-900' : 'text-green-900'
                     )}
                   >
-                    {new Date(nft.expiredAt).toLocaleDateString('ja-JP')}
+                    {new Date(nft.expiredAt).toLocaleDateString('ja-JP', { timeZone: 'UTC' })}
                   </span>
                 </div>
               )}
